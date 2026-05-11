@@ -15,22 +15,24 @@ public class Game
             string lol = Console.ReadLine();
             num = 0;
 
-            if (num < 1 || num > 6)
-            {
-                fool = true;
-            }
-            else
+            foolish = int.TryParse(lol, out num);
+
+            if (foolish == true && num < 1 || num > 6)
             {
                 fool = false;
             }
-            foolish = int.TryParse(lol, out num);
-
-
+            else
+            {
+                fool = true;
+                Console.WriteLine("fool elikamed true");
+            }
+            
 
             Console.WriteLine("skriv ett nummer från 1 till 6");
         
 
         }
+        Console.WriteLine("ute ur looper");
         return num;
     }
 
